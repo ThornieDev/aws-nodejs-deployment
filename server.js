@@ -1,9 +1,10 @@
 const express = require('express');
 const app = express();
 require ('dotenv').config();
+const PORT = process.env.PORT || 8000;
 
 
-app.get('/api/get', (req, res) => {
+app.get('/', (req, res) => {
     res.send('Hello from Express server!'); // Respond with a simple message for the GET request
 })
 app.get('/api/get_user', (req, res) => {
@@ -16,10 +17,11 @@ app.get('/api/get_user', (req, res) => {
     }); // Respond with a simple message for the GET request
 })
 
+
 // app.listen(process.env.PORT, () => {
-//     console.log('Server is running on port 8000');
+//     console.log(`Server is running on port ${process.env.PORT}`);
 // })
 
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server is running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
