@@ -7,7 +7,7 @@ const app = express();
 app.get('/', (req, res) => {
     res.send('Hello from Express server!'); // Respond with a simple message for the GET request
 })
-app.get('/api/get_user', (req, res) => {
+app.get('/api/get_users', (req, res) => {
     res.send({
         user:{
             name: "Chanthorn",
