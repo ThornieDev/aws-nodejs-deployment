@@ -16,6 +16,10 @@ app.get('/api/get_user', (req, res) => {
     }); // Respond with a simple message for the GET request
 })
 
-app.listen(process.env.PORT, () => {
-    console.log('Server is running on port 8000');
-})
+// app.listen(process.env.PORT, () => {
+//     console.log('Server is running on port 8000');
+// })
+
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server is running on port ${PORT}`);
+});
